@@ -1,0 +1,113 @@
+.comment {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.comment img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+}
+
+.commentBox {
+    flex: 1;
+    /* Quando temos uma div com display flex
+    e colocamos flex: 1 em um elemento dela, o elemento
+    ocupa o máximo da DIV possível. Estique o máxim possivel
+
+    max-width: 100% tb funcionou */
+}
+
+.commentContent {
+    background: var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.comment header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* .authorAndTime {
+    display: flex;
+    flex-direction: column;
+
+    ou display block em strong e time
+} */
+
+.authorAndTime strong {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.authorAndTime time {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--gray-400);
+}
+
+.commentContent header button {
+    background: transparent;
+    color: var(--gray-400);
+    cursor: pointer;
+    
+    border: 0;
+    /* A altura de um botão não é definida pelo conteúdo de um botão
+        a altura segue pelo line-height do botão
+
+        line-height: 0... ou font-size: 0
+    */
+    line-height: 0;
+    border-radius: 2px;
+}
+
+.commentContent header button:hover {
+    color: var(--red-500);
+}
+
+.commentContent p {
+    margin-top: 1rem;
+    color: var(--red-300);
+}
+
+.commentBox footer {
+    margin-top: 1rem;
+}
+
+.commentBox footer button {
+    background: transparent;
+    color: var(--gray-400);
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    
+    /* Para o focus ficar redondo */
+    border: 0;
+    border-radius: 2px;
+}
+
+.comment footer button:hover {
+    color: var(--green-300)
+}
+
+.comment footer button svg {
+    margin-right: 0.5rem;
+}
+
+.comment footer button span::before {
+    /* Antes do span, quero colocar o símbolo do ponto */
+    /* O ::before, cria um elemento antes de uma tag desejada
+        <span> 
+            ::before
+            "20"
+        </span>
+    */
+    padding: 0 0.25rem;
+    content: "\2022";
+}
